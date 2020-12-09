@@ -1,0 +1,27 @@
+.header {
+  background-color: white !important;
+  border-bottom: 1px solid #e5e9ed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sider {
+  background-color: #242528 !important;
+}
+
+.menu {
+  background-color: #242528 !important;
+}
+
+.menu-item {
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  padding: 0.5rem;
+}

@@ -1,13 +1,13 @@
-# bops
+# bebop
 
 > bidops design elements
 
-[![NPM](https://img.shields.io/npm/v/bops.svg)](https://www.npmjs.com/package/bops) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/bebop.svg)](https://www.npmjs.com/package/bebop) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save bops
+npm install --save bebop
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ npm install --save bops
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'bops'
-import 'bops/dist/index.css'
+import MyComponent from 'bebop'
+import 'bebop/dist/index.css'
 
 class Example extends Component {
   render() {

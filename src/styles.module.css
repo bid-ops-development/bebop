@@ -1,9 +1,14 @@
 /* add css module styles here (optional) */
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.hero {
+  composes: hero from './text.module.css';
+  background: linear-gradient(to right, darkturquoise, #1D93D3);
+  color: transparent;
+  background-clip: text;
+  padding: 2rem;
+}
+
+.hero::selection {
+  color: white;
+  background: #35a2dd;
 }
