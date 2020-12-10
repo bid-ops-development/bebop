@@ -7,15 +7,13 @@ import MainFrame from '../templates/MainFrame';
 import { userGuideContent } from './userGuideContent';
 const { Icons, Card, Button, Menu, MenuItem } = bebop;
 
-function MainMenu() {
+function MainMenu({ wide }: { wide: boolean }) {
   return <Menu theme='dark' style={{background: '#151b1e'}}>
-    <MenuItem>
-      <Icons.Trophy />
-      {/* Getting Started */}
+    <MenuItem icon={<Icons.Trophy />}>
+      {wide && 'Getting Started'}
     </MenuItem>
-    <MenuItem>
-      <Icons.Rocket />
-      {/* Component Catalog */}
+    <MenuItem icon={<Icons.Rocket />}>
+      {wide && 'Component Catalog'}
     </MenuItem>
   </Menu>
 }
@@ -24,7 +22,7 @@ const content = userGuideContent();
 export function UserGuide() {
   let match = useRouteMatch();
 
-  return <MainFrame menu={<MainMenu />}>
+  return <MainFrame menu={({wideMenu}: {wideMenu: boolean})=><MainMenu wide={wideMenu} />}>
     <Switch>
       <Route path={match.path}>
         <Card title='Bebop User Guide' size='small'>

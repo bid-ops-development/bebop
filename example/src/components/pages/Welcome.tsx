@@ -11,10 +11,10 @@ const { Layout, Card, Button } = Bebop;
 export function Welcome() {
   return <Layout>
     <Jumbotron style={{ background: 'radial-gradient(#eee, #c9e4eb)' }}>
-      <h3>
+      <h5>
         Bebop<span style={{ color: 'darkturquoise' }}>.</span>
-      </h3>
-      <p style={{ fontSize: '12pt', fontWeight: 'lighter' }}>
+      </h5>
+      <p style={{ fontSize: '11pt', fontWeight: 'lighter' }}>
         A design system for Bid Ops products.
         Empower an efficient development experience.
         ⚡
@@ -29,22 +29,22 @@ export function Welcome() {
     <Card style={{ margin: '1rem' }}>
       <Row gutter={18} style={{ justifyContent: 'space-around' }}>
         <Col span={6}>
-          <Card type='inner'>
-            <h1>Build on Solid Foundations</h1>
+          <Card style={{ height: '20em' }}>
+            <h3>🏛️ Build on Solid Foundations</h3>
             <p>Well-tested components provide a uniform and flexible framework for large-scale production applications.</p>
           </Card>
         </Col>
         <Col span={6}>
-          <Card>
-            <h1>Accelerate Development Workflow</h1>
+          <Card style={{ height: '20rem' }}>
+            <h3>🏎️ Accelerate Development Workflow</h3>
             <p>Rapidly construct new pages and workflows with Bebop.</p>
             <p>Fit-for-purpose components support fast iteration speed and accelerate the development of new interactions.</p>
 
           </Card>
         </Col>
         <Col span={6}>
-          <Card>
-            <h1>Simplify Application Code</h1>
+          <Card style={{ height: '20rem' }}>
+            <h3>😌 Simplify Application Code</h3>
             <p>By helping to factor out presentational concerns, Bebop lets you focus on building business logic and testing.</p>
           </Card>
         </Col>
@@ -57,7 +57,7 @@ export function Welcome() {
         </p>
 
         <Card type='inner' title='Empty Application Frame'>
-          <MainFrame menu={<></>}>
+          <MainFrame menu={()=><></>}>
             <Card>Content goes here</Card>
           </MainFrame>
         </Card>
