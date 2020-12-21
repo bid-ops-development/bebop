@@ -17,6 +17,14 @@ const Buttons = {
   ),
   Ghost: (props: CommonProps & ButtonProps) => (
     <Button shape='round' type='ghost' className={button.ghost} {...props} />
+  ),
+  Radiant: (props: CommonProps & ButtonProps) => (
+    <Button
+      shape='round'
+      type='primary'
+      className={button.radiant}
+      {...props}
+    />
   )
 }
 

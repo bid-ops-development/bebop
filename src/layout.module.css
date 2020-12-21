@@ -1,6 +1,6 @@
 .header {
-  background-color: white !important;
-  border-bottom: 1px solid #e5e9ed;
+  /* background-color: white !important; */
+  /* border-bottom: 1px solid #efefef; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,11 +8,11 @@
 }
 
 .sider {
-  background-color: #242528 !important;
+  /* composes: shark-bg from './colors.module.css'; */
 }
 
 .menu {
-  background-color: #242528 !important;
+  /* composes: shark-bg from './colors.module.css'; */
 }
 
 .menu-item {

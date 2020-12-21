@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
 import Bebop from 'bebop';
-import { Row, Col } from 'antd';
+import { Divider, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 import { Jumbotron } from '../templates/Jumbotron';
 import MainFrame from '../templates/MainFrame';
@@ -26,25 +26,26 @@ export function Welcome() {
         <Button.Ghost>Learn More</Button.Ghost>
       </div>
     </Jumbotron>
-    <Card style={{ margin: '1rem' }}>
-      <Row gutter={18} style={{ justifyContent: 'space-around' }}>
-        <Col span={6}>
-          <Card style={{ height: '20em' }}>
+    <Card style={{ margin: '2rem' }}>
+      <Row gutter={4} style={{ justifyContent: 'space-evenly'}}>
+        <Col span={8}>
+          <Card style={{ minHeight: '20rem' }}>
             <h3>🏛️ Build on Solid Foundations</h3>
+            <Divider />
             <p>Well-tested components provide a uniform and flexible framework for large-scale production applications.</p>
           </Card>
         </Col>
-        <Col span={6}>
-          <Card style={{ height: '20rem' }}>
+        <Col span={8}>
+          <Card style={{ minHeight: '20rem' }}>
             <h3>🏎️ Accelerate Development Workflow</h3>
-            <p>Rapidly construct new pages and workflows with Bebop.</p>
+            <Divider />
             <p>Fit-for-purpose components support fast iteration speed and accelerate the development of new interactions.</p>
-
           </Card>
         </Col>
-        <Col span={6}>
-          <Card style={{ height: '20rem' }}>
+        <Col span={8}>
+          <Card style={{ minHeight: '20rem' }}>
             <h3>😌 Simplify Application Code</h3>
+            <Divider />
             <p>By helping to factor out presentational concerns, Bebop lets you focus on building business logic and testing.</p>
           </Card>
         </Col>

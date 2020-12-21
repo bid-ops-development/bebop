@@ -12,7 +12,11 @@ interface MainFrameProps extends BasicProps {
   // wideMenu?: boolean
 }
 
-const Aside = ({ menu, wideMenu }: { menu: MenuBuilder, wideMenu: boolean }) => <Sider width={wideMenu ? 220 : 50}>
+const Aside = ({ menu, wideMenu }: { menu: MenuBuilder, wideMenu: boolean }) =>
+<Sider
+  style={{ background: '#242528' }}
+  width={wideMenu ? 220 : 50}
+  >
   <Affix offsetTop={0}>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start' }}>
       { !!wideMenu 
@@ -24,17 +28,18 @@ const Aside = ({ menu, wideMenu }: { menu: MenuBuilder, wideMenu: boolean }) => 
   </Affix>
 </Sider>
 
-interface MainHeaderProps { setWideMenu: Function }
-const MainHeader = ({ setWideMenu }: MainHeaderProps) => <Header style={{ padding: '2rem' }}>
-  <Icons.Hamburger style={{ color: '#b9c2d0' }} width='1rem' onClick={() => setWideMenu()} />
+interface MainHeaderProps { toggleMenu: Function }
+const MainHeader = ({ toggleMenu }: MainHeaderProps) => <Header style={{ padding: '2rem', backgroundColor: 'rgba(255,255,255,0.5)' }}>
+  <Icons.Hamburger style={{ color: '#b9c2d0' }} width='1rem' onClick={() => toggleMenu()} />
   <Icons.Person style={{ color: '#b9c2d0' }} />
 </Header>
 
 const MainFrame = ({ children, menu }: MainFrameProps) => {
   const [wideMenu, setWideMenu] = useState(false);
+  const toggleMenu = () => setWideMenu(!wideMenu);
   return <PlainLayout
     sider={<Aside wideMenu={!!wideMenu} menu={menu} />}
-    header={<MainHeader setWideMenu={()=>setWideMenu(!wideMenu)} />}
+    header={<MainHeader toggleMenu={toggleMenu} />}
     style={{ flexDirection: 'column' }}
   >
     {children}

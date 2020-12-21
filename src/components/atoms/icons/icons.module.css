@@ -1,0 +1,9 @@
+.icon {
+  /* composes: gallery from '../../../colors.module.css'; */
+  color: #eee;
+}
+
+.icon:hover {
+  color: #221122 !important;
+  /* composes: woodsmoke from '../../colors.module.css'; */
+}

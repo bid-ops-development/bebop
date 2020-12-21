@@ -8,7 +8,7 @@ import { userGuideContent } from './userGuideContent';
 const { Icons, Card, Button, Menu, MenuItem } = bebop;
 
 function MainMenu({ wide }: { wide: boolean }) {
-  return <Menu theme='dark' style={{background: '#151b1e'}}>
+  return <Menu theme='dark' style={{ color: '#fff', background: '#242528', borderRight: 'none' }}>
     <MenuItem icon={<Icons.Trophy />}>
       {wide && 'Getting Started'}
     </MenuItem>

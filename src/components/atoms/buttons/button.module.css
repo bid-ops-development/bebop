@@ -1,6 +1,23 @@
-.primary {
-  margin: 0.2rem;
+.button {
+  margin: 0.5rem;
+  font-weight: bolder !important;
 }
-.ghost {
-  margin: 0.2rem;
+
+.primary {
+  /* background: turquoise !important;
+  border-color: turquoise !important; */
+  composes: button;
+  /* composes: turquoise-bg from '../../../colors.module.css'; */
+}
+
+.radiant {
+  /* background: linear-gradient(to bottom-right, turquoise, pink) !important; */
+  /* border-color: turquoise !important;  */
+  composes: button;
+}
+
+.ghost { 
+  /* border-color: turquoise !important; */
+  /* color: turquoise !important; */
+  composes: button;
 }

@@ -8,8 +8,9 @@ import {
 
 import { UserGuide, Welcome } from './components/pages';
 
-import 'bebop/dist/index.css'
-import 'antd/dist/antd.css'
+// import 'bebop/dist/index.css'
+// import './theme.less'
+// import 'antd/dist/antd.less'
 
 const App = () => {
   return <Router>
